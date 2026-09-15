@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job & Money Manifestation Course ✦ Prathiba Senthil</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Rewire your financial blueprint and magnetize career abundance with the Prathiba Senthil Job & Money Manifestation Video Course." />
+  <meta name="keywords" content="Job manifestation, money manifestation, career law of attraction, wealth consciousness, financial abundance course" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Job & Money Manifestation Course ✦ Prathiba Senthil" />
+  <meta property="og:description" content="A comprehensive digital masterclass to rewire limiting scarcity beliefs and magnetize career abundance." />
+  <meta property="og:image" content="assets/images/course-wealth-cosmic.jpg" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Interactive Canvas Starfield -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link active">Courses</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <!-- Conversion WhatsApp CTA in Header -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-2.5 px-6">
+          Enquire on WhatsApp <span class="text-sm">→</span>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gold-400">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">FAQs</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        ENQUIRE ON WHATSAPP →
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-28 md:pt-36">
+    <!-- ==========================================================================
+         HERO SECTION: COURSE TITLE & CINEMATIC COSMIC ARTWORK
+         ========================================================================== -->
+    <section class="relative px-4 sm:px-8 max-w-7xl mx-auto pb-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Course Information & WhatsApp Conversion Button -->
+        <div class="lg:col-span-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs uppercase tracking-widest text-gold-300 font-bold px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30">
+              VIDEO COURSE
+            </span>
+            <span class="text-xs text-gray-400">Self-Paced · Lifetime Access · 8 Modules</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight mb-6">
+            Job / Money Manifestation <br />
+            <span class="gold-gradient-text italic font-serif">Course</span>
+          </h1>
+
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+            A transformational self-paced digital journey designed to shatter your subconscious glass ceiling, dissolve money trauma, and align your vibrational frequency with career breakthroughs, sovereign clients, and effortless financial abundance.
+          </p>
+
+          <!-- Investment & WhatsApp CTA Box -->
+          <div class="p-6 rounded-2xl glass-panel border-gold-500/30 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div>
+              <span class="text-xs text-gray-400 uppercase tracking-widest block">Enrollment Investment</span>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-serif text-3xl sm:text-4xl font-bold text-gold-400" data-config="courses.jobMoney.priceDisplay">$197</span>
+                <span class="text-sm text-gray-500 line-through" data-config="courses.jobMoney.originalPriceDisplay">$497</span>
+                <span class="text-xs text-green-400 font-medium ml-2">60% Off Launch Special</span>
+              </div>
+              <span class="text-xs text-gray-400 mt-1 block">Full Lifetime Access + Community Membership</span>
+            </div>
+
+            <!-- THE SPECIFIED CONVERSION CTA: ENQUIRE ON WHATSAPP -->
+            <div>
+              <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-4 px-8 w-full sm:w-auto text-center font-semibold">
+                ENQUIRE ON WHATSAPP →
+              </a>
+              <span class="text-[0.7rem] text-gray-500 block text-center mt-2">Instant response from our team</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6 text-xs text-gray-400">
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> 100% Digital HD Video</span>
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> Subconscious Audio Tracks</span>
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> Direct WhatsApp Support</span>
+          </div>
+        </div>
+
+        <!-- Right: Cinematic Cosmic Visual Artwork -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden border border-gold-500/30 shadow-2xl aspect-[4/3] sm:aspect-square group">
+            <img 
+              src="assets/images/course-wealth-cosmic.jpg" 
+              alt="Ethereal champagne gold stellar stardust and nebula in deep space" 
+              class="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-space-950/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border-gold-500/20">
+              <span class="font-serif text-lg text-white font-medium block">Wealth is a State of Frequency</span>
+              <span class="text-xs text-gold-400/90 mt-0.5 block">Dissolve resistance. Align with universal circulation.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1: COURSE OVERVIEW
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="max-w-3xl">
+        <div class="eyebrow-badge mb-3">
+          <span>DEEP DIVE</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white mb-6">
+          Course <span class="gold-gradient-text italic font-serif">Overview</span>
+        </h2>
+        <p class="text-gray-300 text-base leading-relaxed mb-6">
+          Most individuals work tirelessly in physical reality trying to force promotions, secure salary raises, and build savings—yet find themselves constantly bouncing back to the same financial baseline. This happens because physical action accounts for only 5% of reality creation. The remaining 95% is governed by your subconscious vibrational blueprint.
+        </p>
+        <p class="text-gray-300 text-base leading-relaxed">
+          The <strong>Job & Money Manifestation Course</strong> provides the step-by-step metaphysical architecture to dismantle old scarcity scripts, neutralize financial fear, and reprogram your identity to naturally attract dream employment, leadership roles, multiple income streams, and lasting peace of mind.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: WHAT YOU'LL LEARN (8 Modules Interactive Accordion)
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>CURRICULUM ARCHITECTURE</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          What You Will <span class="gold-gradient-text italic font-serif">Learn</span>
+        </h2>
+        <p class="text-gray-400 text-sm mt-3">
+          8 carefully sequenced modules designed to elevate your financial frequency.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-4" data-single-expand="true">
+        
+        <!-- Module 1 -->
+        <div class="accordion-item glass-panel border-gold-500/20 active">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">01</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 1: The Quantum Laws of Money & Abundance</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed" style="max-height: 250px;">
+            Understand money not as paper or numbers, but as concentrated cosmic energy and exchange of value. Discover how thoughts and emotions directly influence your financial circulation, and why forcing action without vibrational alignment always creates friction.
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">02</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 2: Subconscious Shadow Clearing & Money Trauma</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Identify ancestral scarcity beliefs, inherited poverty consciousness, and unspoken family loyalties that keep you in financial struggle. Engage in somatic release practices to forgive past debt, regret, and scarcity trauma.
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">03</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 3: Reprogramming the Reticular Activating System (RAS)</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Utilize neuro-linguistic techniques and specialized binaural theta audio frequencies to prime your brain's filtering mechanisms to notice lucrative opportunities, high-paying clients, and career openings that were previously invisible.
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">04</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 4: Career Magnetism & The Ideal Job Blueprint</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Step-by-step protocol for crafting an exact energetic specification for your next career move: salary expectations, organizational culture, creative fulfillment, and sovereign autonomy. Learn how to transmit this blueprint into the cosmic field.
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">05</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 5: Interview Mastery & Energetic Authority</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Enter high-stakes interviews and client pitches with relaxed majesty rather than anxious desperation. Master non-verbal aura projection, confident salary negotiation, and intuitive discernment to land offers on your terms.
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">06</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 6: Generating Multi-Stream Abundance & Synchronicities</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Moving beyond single-income dependence. Learn how to open your energetic channels for unexpected bonuses, consulting requests, royalties, and spontaneous gifts of capital.
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">07</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 7: Daily Wealth Rituals & Non-Resistance</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Construct a 15-minute morning and evening energetic priming routine. Learn how to bless bills, celebrate expenses, and maintain a constant state of appreciative gratitude that magnetizes accelerated returns.
+          </div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="accordion-item glass-panel border-gold-500/20">
+          <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <div class="flex items-center gap-4">
+              <span class="text-gold-400 font-serif font-bold text-lg">08</span>
+              <span class="font-serif text-lg sm:text-xl text-white">Module 8: Embodying the Sovereign Creator Identity</span>
+            </div>
+            <span class="accordion-icon text-gold-400 text-xl">▼</span>
+          </button>
+          <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+            Cementing your transformation permanently. Preventing regression to old upper-limit problems, managing expansive financial growth, and using wealth as an instrument of benevolent consciousness.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: KEY BENEFITS
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>THE TRANSFORMATION</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-white">
+          Key <span class="gold-gradient-text italic font-serif">Benefits</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Freedom From Scarcity Fear</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Eliminate late-night money anxiety and anchor an unshakeable sense of security rooted in universal provision.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Rapid Career Elevation</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Attract promotions, executive opportunities, and fulfilling work environments that pay your authentic worth.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Unexpected Income Influx</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Experience synchronicities, client windfalls, and spontaneous financial channels opening in surprising ways.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Subconscious Recalibration</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Bypass the critical analytical mind with guided audio reprogramming to make wealth habits subconscious reflex.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Lifelong Sanctuary Access</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Revisit modules, updates, and meditation frequencies anytime you are ready to expand to a new financial tier.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-gold-400 text-xl mb-2" data-config="brand.symbol">✦</div>
+          <h4 class="text-white font-serif text-lg mb-2">Direct WhatsApp Concierge</h4>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Personal guidance whenever you encounter questions or energetic resistance during your course progression.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: FORMAT, DURATION & PRICING
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="glass-panel p-8 sm:p-12 max-w-4xl mx-auto border-gold-500/30">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="eyebrow-badge mb-2 justify-center">
+            <span>FORMAT & ENROLLMENT</span>
+          </div>
+          <h3 class="font-serif text-3xl sm:text-4xl text-white">
+            Everything Included in Your Journey
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 text-center">
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Course Format</span>
+            <span class="text-white font-medium text-base">Self-Paced HD Digital</span>
+          </div>
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Access Duration</span>
+            <span class="text-white font-medium text-base">Lifelong Unlimited</span>
+          </div>
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Total Investment</span>
+            <span class="text-gold-400 font-serif font-bold text-2xl">$197</span>
+          </div>
+        </div>
+
+        <!-- Conversion Flow CTA: Enquire on WhatsApp -->
+        <div class="text-center">
+          <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="btn-gold-primary text-sm uppercase tracking-wider py-4 px-10 font-semibold inline-flex items-center gap-2">
+            <span>ENQUIRE ON WHATSAPP →</span>
+          </a>
+          <p class="text-xs text-gray-400 mt-4">
+            ✦ All course admissions and access setups are facilitated through direct WhatsApp consultation. No automated checkout required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: COURSE FAQ
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="eyebrow-badge mb-2 justify-center">
+          <span>FREQUENT QUESTIONS</span>
+        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl text-white">
+          Job & Money Course FAQs
+        </h3>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">How quickly do students typically see tangible financial shifts?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Many students report unexpected income, interview calls, or significant shifts in calm within the first 14 to 21 days of consistently applying the daily reprogramming audios and rituals.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">How does WhatsApp enrollment work without an online checkout?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Clicking "Enquire on WhatsApp" connects you directly with a Prathiba Senthil guide with the course pre-selected. We address any specific questions you have and provide your personalized digital portal activation link directly in the chat.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">Do I need prior experience with manifestation or meditation?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            None at all. The course starts from foundational principles and explains every concept with practical clarity, free from dogmatic jargon.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: FINAL COURSE CTA
+         ========================================================================== -->
+    <section class="py-20 px-4 sm:px-8 max-w-5xl mx-auto text-center border-t border-white/10">
+      <div class="eyebrow-badge mb-3 justify-center">
+        <span>YOUR NEW REALITY AWAITS</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-6">
+        Step Into Effortless Financial Sovereignty
+      </h2>
+      <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mb-8 font-light">
+        Your relationship with money is ready to change permanently. Connect with us on WhatsApp to begin your transformation today.
+      </p>
+      <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-4 px-10 font-semibold">
+        ENQUIRE ON WHATSAPP →
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-16 pb-12 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-xl font-medium text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+          A luxury sanctuary for conscious manifestation, spiritual awakening, and quantum mindset elevation.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Journeys</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="courses.html" class="hover:text-gold-400">Choose Your Journey</a></li>
+          <li><a href="course-job-money.html" class="hover:text-gold-400 text-gold-300">Job & Money Manifestation</a></li>
+          <li><a href="course-supernatural.html" class="hover:text-gold-400">The Supernatural (6 Months)</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Design Your Destiny</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Sanctuary</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="about.html" class="hover:text-gold-400">Our Vision & Beliefs</a></li>
+          <li><a href="faq.html" class="hover:text-gold-400">Frequently Asked Questions</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Enquiry Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Direct Connect</h4>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Questions about this video course? Chat with our admissions guide on WhatsApp.
+        </p>
+        <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="btn-gold-outline text-xs py-2.5 px-4 w-full justify-center">
+          ENQUIRE ON WHATSAPP →
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="faq.html" class="hover:text-gray-400">Privacy Policy</a>
+        <a href="faq.html" class="hover:text-gray-400">Terms of Alignment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" data-wa-action data-wa-type="jobMoneyCourse" class="whatsapp-float-btn" aria-label="Enquire on WhatsApp about Job & Money Course">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <script src="js/config.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

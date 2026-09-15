@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prathiba Senthil ✦ Manifest A Brighter You</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="A transformative manifestation platform to help you align with the universe, reprogram your mindset, and create the life you truly desire." />
+  <meta name="keywords" content="Prathiba Senthil, manifestation course, spiritual awakening, law of attraction, mindset reprogramming, cosmic consciousness" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prathiba Senthil ✦ Manifest A Brighter You" />
+  <meta property="og:description" content="Your thoughts shape your reality. Begin your cosmic manifestation journey today." />
+  <meta property="og:image" content="assets/images/hero-cosmic-meditation.jpg" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Background Interactive Canvas for Cosmic Starfield & Shooting Stars -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <!-- Desktop Header CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="courses.html" class="btn-gold-primary text-xs uppercase tracking-wider py-2.5 px-6">
+          Join the Journey <span class="text-sm">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gold-400">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">FAQs</a>
+    </nav>
+
+    <!-- Mobile Menu Bottom Action -->
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="courses.html" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        Join the Journey →
+      </a>
+      <p class="text-xs text-gray-500 mt-4 tracking-wider uppercase">✦ A greater you is already within</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SECTION 1: HERO SECTION (Full Atmospheric Cosmic Background)
+         ========================================================================== -->
+    <section id="hero" class="relative w-full min-h-screen overflow-hidden flex flex-col justify-between">
+      
+      <!-- Full Atmospheric Background Layer -->
+      <div id="hero-bg-wrapper" class="hero-bg-wrapper">
+        <img 
+          id="hero-bg-img" 
+          src="assets/images/hero-cosmic-meditation.png" 
+          alt="Parthiban Senthil - Cosmic manifestation journey with woman meditating under glowing spiral galaxy" 
+          loading="eager"
+        />
+      </div>
+
+      <!-- Atmospheric Overlays -->
+      <div class="hero-overlay-reading"></div>
+      <div class="hero-top-fade"></div>
+      <div class="hero-bottom-fade"></div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 pt-28 pb-8 md:pt-36 md:pb-12 flex-grow flex flex-col justify-center">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column: Typography, Story & CTA Buttons -->
+          <div class="lg:col-span-7 xl:col-span-6 z-10">
+            
+            <!-- Eyebrow Subheading -->
+            <div class="eyebrow-badge hero-anim-eyebrow mb-4">
+              <span>MANIFEST A BRIGHTER YOU</span>
+            </div>
+
+            <!-- Main Hero Headline -->
+            <h1 class="hero-anim-headline font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.15rem] leading-[1.12] tracking-tight text-white mb-6">
+              <span class="hero-headline-line block">Your Thoughts</span>
+              <span class="hero-headline-line block">Shape <span class="gold-gradient-text font-serif italic hero-gold-glow">Your Reality</span></span>
+            </h1>
+
+            <!-- Body Description -->
+            <p class="hero-anim-desc text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mb-9 font-normal">
+              A transformative manifestation course to help you align with the universe, reprogram your mindset, and create the life you truly desire.
+            </p>
+
+            <!-- Dual CTA Buttons -->
+            <div class="hero-anim-cta flex flex-wrap items-center gap-4 sm:gap-6 mb-12">
+              <a href="courses.html" class="btn-gold-primary text-sm tracking-wide">
+                Start Your Transformation <span class="text-base">→</span>
+              </a>
+
+              <!-- Watch Trailer Button with Play Modal -->
+              <button data-open-trailer class="btn-trailer group" aria-label="Watch trailer video">
+                <span class="trailer-play-icon">
+                  <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </span>
+                <span class="text-sm font-medium tracking-wide">Watch Trailer</span>
+              </button>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="hero-anim-stats flex items-center gap-6 sm:gap-8 pt-6 border-t border-white/10 text-sm">
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-white">10K+</div>
+                <div class="text-gray-400 text-xs tracking-wider uppercase mt-0.5">Students</div>
+              </div>
+              <div class="h-8 w-[1px] bg-white/15"></div>
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-400">4.9<span class="text-gold-400 text-xl ml-1">★</span></div>
+                <div class="text-gray-400 text-xs tracking-wider uppercase mt-0.5">Average Rating</div>
+              </div>
+              <div class="h-8 w-[1px] bg-white/15"></div>
+              <div>
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-white">95%</div>
+                <div class="text-gray-400 text-xs tracking-wider uppercase mt-0.5">Feel More Positive</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Clean Atmospheric Negative Space (Reveals Cosmic Galaxy & Meditating Figure) -->
+          <div class="hidden lg:block lg:col-span-5 xl:col-span-6 pointer-events-none min-h-[380px] sm:min-h-[460px]">
+            <!-- Unobstructed view of cosmic nebula, swirling galaxy, crescent planets, and meditating figure -->
+          </div>
+
+        </div>
+
+      <!-- Feature Strip (Glassmorphism rounded bar) -->
+      <div class="mt-14 sm:mt-16 md:mt-20 feature-bar p-6 sm:p-8 hero-anim-features">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          
+          <!-- Item 1: Mindset Shift -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 flex-shrink-0 text-lg">
+              ✦
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Mindset Shift</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Rewire limiting beliefs</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Practical Tools -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 flex-shrink-0">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 3c-1.5 2.5-3 5-3 8 0 3 2.5 5 3 5s3-2 3-5c0-3-1.5-5.5-3-8zm-5 6c-2 1-3.5 3-3.5 5 0 2.5 2 4.5 4.5 4.5 2 0 3.5-1.5 4-3.5-1.5-.5-3.5-2.5-5-6zm10 0c-1.5 3.5-3.5 5.5-5 6 .5 2 2 3.5 4 3.5 2.5 0 4.5-2 4.5-4.5 0-2-1.5-4-3.5-5z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Practical Tools</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Guided exercises & meditations</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Universal Principles -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 flex-shrink-0">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.46z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Universal Principles</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Tap into the law of attraction</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Lifelong Access -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 flex-shrink-0 text-lg">
+              ∞
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Lifelong Access</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Learn at your own pace</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div> <!-- /Hero Content Container -->
+
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: THE COURSE & THE JOURNEY (Cosmic Portal & 4 Steps)
+         ========================================================================== -->
+    <section class="relative py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        
+        <!-- Left Side: Overview & Curriculum Trigger -->
+        <div class="lg:col-span-5">
+          <div class="eyebrow-badge mb-3">
+            <span>THE COURSE</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white leading-tight mb-6">
+            A Journey Within<br />
+            to a <span class="gold-gradient-text italic font-serif">Brighter Tomorrow</span>
+          </h2>
+
+          <p class="text-gray-300 text-base leading-relaxed mb-8">
+            This course is a blend of ancient wisdom and modern techniques, designed to help you align with the universe and manifest abundance, love, health, and success.
+          </p>
+
+          <a href="courses.html" class="btn-gold-primary text-sm tracking-wide">
+            Explore the Curriculum <span class="text-base">→</span>
+          </a>
+        </div>
+
+        <!-- Center: Portal Artwork -->
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="relative w-full max-w-xs aspect-[3/4] rounded-full overflow-hidden border-2 border-gold-400/40 shadow-2xl shadow-purple-950/60 group">
+            <img 
+              src="assets/images/portal-journey.jpg" 
+              alt="Cosmic luminous portal opening into an infinite galaxy of stars" 
+              class="w-full h-full object-cover  group-hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-space-950/60 via-transparent to-space-950/20 pointer-events-none"></div>
+          </div>
+        </div>
+
+        <!-- Right Side: 4 Journey Milestones -->
+        <div class="lg:col-span-3 flex flex-col gap-6">
+          
+          <!-- Step 01 -->
+          <div class="journey-step-card flex items-center gap-4 group">
+            <div class="journey-step-node">01</div>
+            <div>
+              <h4 class="text-white font-medium text-base group-hover:text-gold-300 transition-colors">Understand</h4>
+              <p class="text-gray-400 text-xs leading-relaxed">Learn the universal laws</p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="journey-step-card flex items-center gap-4 group">
+            <div class="journey-step-node">02</div>
+            <div>
+              <h4 class="text-white font-medium text-base group-hover:text-gold-300 transition-colors">Align</h4>
+              <p class="text-gray-400 text-xs leading-relaxed">Shift your mindset</p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="journey-step-card flex items-center gap-4 group">
+            <div class="journey-step-node">03</div>
+            <div>
+              <h4 class="text-white font-medium text-base group-hover:text-gold-300 transition-colors">Manifest</h4>
+              <p class="text-gray-400 text-xs leading-relaxed">Take inspired action</p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="journey-step-card flex items-center gap-4 group">
+            <div class="journey-step-node">04</div>
+            <div>
+              <h4 class="text-white font-medium text-base group-hover:text-gold-300 transition-colors">Live</h4>
+              <p class="text-gray-400 text-xs leading-relaxed">Create your dream reality</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT YOU'LL ACHIEVE (4 Distinct Transformation Cards)
+         ========================================================================== -->
+    <section class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>WHAT YOU'LL ACHIEVE</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          A More Aligned, <span class="gold-gradient-text italic font-serif">Abundant You</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Attract Love -->
+        <div class="glass-card p-8 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-cosmic-purple/30 border border-gold-500/20 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 group-hover:border-gold-400 transition-transform">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2 group-hover:text-gold-300 transition-colors">Attract Love</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Build deeper, meaningful connections</p>
+        </div>
+
+        <!-- Card 2: Create Wealth -->
+        <div class="glass-card p-8 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-cosmic-purple/30 border border-gold-500/20 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 group-hover:border-gold-400 transition-transform">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2 group-hover:text-gold-300 transition-colors">Create Wealth</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Open doors to financial abundance</p>
+        </div>
+
+        <!-- Card 3: Better Health -->
+        <div class="glass-card p-8 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-cosmic-purple/30 border border-gold-500/20 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 group-hover:border-gold-400 transition-transform">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l-4 4m4-4l4 4m-8 6c0 4.418 3.582 8 8 8s8-3.582 8-8"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2 group-hover:text-gold-300 transition-colors">Better Health</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Feel energized and balanced</p>
+        </div>
+
+        <!-- Card 4: Live with Purpose -->
+        <div class="glass-card p-8 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-cosmic-purple/30 border border-gold-500/20 flex items-center justify-center text-gold-400 mb-6 group-hover:scale-110 group-hover:border-gold-400 transition-transform">
+            <svg class="w-6 h-6 fill-none stroke-current" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2 group-hover:text-gold-300 transition-colors">Live with Purpose</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Turn your dreams into reality</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: TESTIMONIALS (Exact Community Transformation Stories)
+         ========================================================================== -->
+    <section class="relative py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>REAL PEOPLE. REAL TRANSFORMATIONS.</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          Stories from <span class="gold-gradient-text italic font-serif">Our Community</span>
+        </h2>
+      </div>
+
+      <!-- Testimonial Slider Controls -->
+      <div class="relative flex items-center justify-center gap-4">
+        
+        <!-- Prev Button -->
+        <button id="testimonial-prev" class="w-10 h-10 rounded-full border border-white/20 bg-space-900/80 flex items-center justify-center text-gray-300 hover:text-gold-400 hover:border-gold-400 transition-colors focus:outline-none" aria-label="Previous testimonial">
+          ‹
+        </button>
+
+        <!-- Cards Container -->
+        <div class="overflow-hidden w-full max-w-5xl">
+          <div id="testimonial-track" class="grid grid-cols-1 md:grid-cols-3 gap-6 transition-transform duration-500">
+            
+            <!-- Testimonial 1: Priya S. -->
+            <div class="testimonial-card glass-card p-6 flex flex-col justify-between">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/images/avatar-priya.jpg" alt="Priya S." class="w-12 h-12 rounded-full object-cover border border-gold-400/40" />
+                <div>
+                  <h4 class="text-white font-medium text-sm">Priya S.</h4>
+                  <div class="text-gold-400 text-xs">★★★★★</div>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed italic">
+                "This course completely shifted my perspective. I've manifested opportunities I never thought possible!"
+              </p>
+            </div>
+
+            <!-- Testimonial 2: Arjun M. -->
+            <div class="testimonial-card glass-card p-6 flex flex-col justify-between">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/images/avatar-arjun.jpg" alt="Arjun M." class="w-12 h-12 rounded-full object-cover border border-gold-400/40" />
+                <div>
+                  <h4 class="text-white font-medium text-sm">Arjun M.</h4>
+                  <div class="text-gold-400 text-xs">★★★★★</div>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed italic">
+                "Simple, powerful, and life-changing. I feel more in control of my life than ever before."
+              </p>
+            </div>
+
+            <!-- Testimonial 3: Sneha K. -->
+            <div class="testimonial-card glass-card p-6 flex flex-col justify-between">
+              <div class="flex items-center gap-4 mb-4">
+                <img src="assets/images/avatar-sneha.jpg" alt="Sneha K." class="w-12 h-12 rounded-full object-cover border border-gold-400/40" />
+                <div>
+                  <h4 class="text-white font-medium text-sm">Sneha K.</h4>
+                  <div class="text-gold-400 text-xs">★★★★★</div>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed italic">
+                "It's more than a course — it's a new way of living. Highly recommended!"
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Next Button -->
+        <button id="testimonial-next" class="w-10 h-10 rounded-full border border-white/20 bg-space-900/80 flex items-center justify-center text-gray-300 hover:text-gold-400 hover:border-gold-400 transition-colors focus:outline-none" aria-label="Next testimonial">
+          ›
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: FINAL CTA SECTION (Earth Horizon Artwork & Script Callout)
+         ========================================================================== -->
+    <section class="relative min-h-[580px] sm:min-h-[640px] flex items-center justify-center overflow-hidden px-4 sm:px-8 my-16">
+      
+      <!-- Background Earth Horizon Composite -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="assets/images/cta-earth-horizon.jpg" 
+          alt="Glowing curved Earth horizon with city lights and starlight against deep cosmic space" 
+          class="w-full h-full object-cover object-bottom"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-space-950 via-space-950/40 to-space-950/80"></div>
+      </div>
+
+      <!-- Reference Script Annotation: "SAME ENERGY . BIGGER REALITY" -->
+      <div class="absolute bottom-10 left-8 sm:left-14 hidden md:block z-10">
+        <div class="text-[0.65rem] tracking-[0.25em] text-gray-400/70 font-semibold space-y-0.5 uppercase">
+          <div>SAME ENERGY</div>
+          <div>. BIGGER REALITY</div>
+        </div>
+      </div>
+
+      <!-- Reference Script Annotation: "Good things take alignment" -->
+      <div class="absolute bottom-12 right-8 sm:right-14 hidden md:block z-10 text-right">
+        <span class="font-script text-2xl sm:text-3xl text-gold-300/85 block">
+          Good things<br />take alignment
+        </span>
+        <div class="w-20 h-[1px] bg-gold-400/30 ml-auto mt-1"></div>
+      </div>
+
+      <!-- Center CTA Content -->
+      <div class="relative z-10 text-center max-w-2xl mx-auto py-16">
+        <div class="eyebrow-badge mb-4 justify-center">
+          <span>THE UNIVERSE IS LISTENING</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6">
+          Are You Ready to Manifest?
+        </h2>
+
+        <p class="text-gray-200 text-base sm:text-lg mb-9 font-light">
+          Your dream life is not a fantasy. It's a decision away.
+        </p>
+
+        <a href="courses.html" class="btn-gold-primary text-sm uppercase tracking-wider py-3.5 px-8">
+          Join the Course Now <span class="text-base">→</span>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIDEO TRAILER MODAL
+       ========================================================================== -->
+  <div id="trailer-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <div class="flex items-center justify-between p-4 px-6 border-b border-white/10 bg-space-950/90">
+        <div class="flex items-center gap-2">
+          <span class="text-gold-400 text-lg" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-lg font-medium text-white">Prathiba Senthil Official Trailer</span>
+        </div>
+        <button id="modal-close-btn" class="text-gray-400 hover:text-white p-1 focus:outline-none" aria-label="Close trailer">
+          ✕
+        </button>
+      </div>
+      <div class="relative aspect-video w-full bg-black flex items-center justify-center">
+        <!-- Interactive Cinematic Cosmic Trailer Stream -->
+        <iframe 
+          class="w-full h-full"
+          src="https://www.youtube-nocookie.com/embed/gXWYzE6G-fQ?autoplay=0&controls=1&rel=0" 
+          title="Prathiba Senthil Manifestation Experience" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-16 pb-12 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Col 1: Brand Info -->
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-xl font-medium text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+          A luxury sanctuary for conscious manifestation, spiritual awakening, and quantum mindset elevation.
+        </p>
+        <div class="flex items-center gap-4 text-gray-300">
+          <a href="#" data-social-channel="instagram" class="hover:text-gold-400 transition-colors" aria-label="Instagram">Instagram</a>
+          <a href="#" data-social-channel="youtube" class="hover:text-gold-400 transition-colors" aria-label="YouTube">YouTube</a>
+          <a href="#" data-social-channel="spotify" class="hover:text-gold-400 transition-colors" aria-label="Spotify">Meditations</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Journeys</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="courses.html" class="hover:text-gold-400 transition-colors">Choose Your Journey</a></li>
+          <li><a href="course-job-money.html" class="hover:text-gold-400 transition-colors">Job & Money Manifestation</a></li>
+          <li><a href="course-supernatural.html" class="hover:text-gold-400 transition-colors">The Supernatural (6 Months)</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400 transition-colors">Design Your Destiny</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Sanctuary -->
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Sanctuary</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="about.html" class="hover:text-gold-400 transition-colors">Our Vision & Beliefs</a></li>
+          <li><a href="faq.html" class="hover:text-gold-400 transition-colors">Frequently Asked Questions</a></li>
+          <li><a href="about.html#personal-growth" class="hover:text-gold-400 transition-colors">Transformation Framework</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400 transition-colors">Contact Mentors</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Direct WhatsApp Conversion -->
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Direct Connect</h4>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Prefer personal guidance? Talk directly with our admissions and manifestation guide on WhatsApp.
+        </p>
+        <a href="#" data-wa-action data-wa-type="general" class="btn-gold-outline text-xs py-2.5 px-4 w-full justify-center">
+          Chat on WhatsApp →
+        </a>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="faq.html" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+        <a href="faq.html" class="hover:text-gray-400 transition-colors">Terms of Alignment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="#" data-wa-action data-wa-type="general" class="whatsapp-float-btn" aria-label="Chat on WhatsApp with Prathiba Senthil">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <!-- GSAP & ScrollTrigger for Cinematic Hero Animations & Parallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Configuration and Logic Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

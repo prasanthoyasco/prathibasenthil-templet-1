@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions ✦ Prathiba Senthil</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Find answers to common questions regarding manifestation principles, course formats, WhatsApp enrollment, and The Supernatural personal mentorship." />
+  <meta name="keywords" content="Prathiba Senthil FAQs, manifestation questions, how to manifest, course enrollment questions" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Interactive Canvas Starfield -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        <a href="faq.html" class="nav-link active">FAQs</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="courses.html" class="btn-gold-primary text-xs uppercase tracking-wider py-2.5 px-6">
+          Explore Courses <span class="text-sm">→</span>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gold-400">FAQs</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="courses.html" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        Explore Courses →
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-28 md:pt-36 pb-24 px-4 sm:px-8 max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="eyebrow-badge mb-3 justify-center">
+        <span>QUESTIONS & CLARITY</span>
+      </div>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white mb-4">
+        FREQUENTLY ASKED <span class="gold-gradient-text italic font-serif">QUESTIONS</span>
+      </h1>
+      <p class="text-gray-300 text-base sm:text-lg font-light">
+        Everything you need to understand regarding our manifestation science, courses, and admissions.
+      </p>
+
+      <!-- Interactive Search Input -->
+      <div class="mt-8 max-w-xl mx-auto relative">
+        <input 
+          type="text" 
+          id="faq-search-input" 
+          placeholder="Search by keyword (e.g. money, whatsapp, duration, guarantee)..." 
+          class="input-cosmic pr-10 text-sm"
+        />
+        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gold-400 text-sm pointer-events-none">🔍</span>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-6 text-xs font-medium">
+        <button data-faq-tab="all" class="px-4 py-2 rounded-full border border-gold-400 text-gold-300 bg-space-900/60 active transition-all">All Questions</button>
+        <button data-faq-tab="manifestation" class="px-4 py-2 rounded-full border border-white/10 text-gray-400 hover:text-white transition-all">Manifestation Science</button>
+        <button data-faq-tab="video-course" class="px-4 py-2 rounded-full border border-white/10 text-gray-400 hover:text-white transition-all">Video Course</button>
+        <button data-faq-tab="supernatural" class="px-4 py-2 rounded-full border border-white/10 text-gray-400 hover:text-white transition-all">The Supernatural Mentorship</button>
+        <button data-faq-tab="admissions" class="px-4 py-2 rounded-full border border-white/10 text-gray-400 hover:text-white transition-all">WhatsApp Admissions</button>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion List -->
+    <div class="space-y-4" id="faq-list-container">
+      
+      <!-- Item 1 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20 active" data-category="manifestation">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">How is Prathiba Senthil different from generic law of attraction content?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed" style="max-height: 250px;">
+          Most online content focuses on surface-level positive thinking without addressing the nervous system or subconscious trauma. Prathiba Senthil combines quantum metaphysics, neuro-linguistic reprogramming, and somatic habit architecture to create verifiable, grounded shifts in career, finances, and relationships.
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="video-course">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">What is included with the Job / Money Manifestation Course?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          You receive complete lifetime access to all 8 HD video modules, downloadable audio reprogramming tracks (with theta binaural frequencies), energetic workbooks, daily morning and evening rituals, and direct access to our WhatsApp student desk.
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="supernatural">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">Why is The Supernatural restricted to only 10 participants?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          The Supernatural is a bespoke 1-on-1 mentorship, not a mass webinar. Our master mentors work intimately with each client's specific business models, relationship dynamics, and nervous system blocks. To maintain uncompromising attention and rapid breakthroughs, cohort capacity is strictly capped.
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="admissions">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">Why do courses use WhatsApp for enquiry instead of automated checkout?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          We believe spiritual and financial transformation should never feel like an impersonal SaaS subscription. By initiating enrollment via WhatsApp, we can personally understand your background, confirm program compatibility, answer any unique concerns, and onboard you with high-touch care.
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="manifestation">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">Do I have to abandon practical action to practice manifestation?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          Absolutely not. We teach *inspired action* over forced striving. In our framework, when you align your energetic frequency first, every email you send, interview you attend, or decision you make carries 10x the magnetic impact with zero friction.
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="video-course">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">Can I complete the Job & Money course at my own pace?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          Yes. The video course is 100% self-paced. You have lifetime access to return to modules, refresh exercises before job negotiations, or replay guided audios anytime you choose.
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="faq-item accordion-item glass-panel border-gold-500/20" data-category="supernatural">
+        <button class="accordion-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+          <span class="font-serif text-lg text-white">What happens during the monthly 1-on-1 calls in The Supernatural?</span>
+          <span class="accordion-icon text-gold-400 text-xl">▼</span>
+        </button>
+        <div class="accordion-content px-6 pb-6 text-gray-300 text-sm leading-relaxed">
+          Each 60-minute call evaluates your monthly growth benchmarks, audits any recurring friction points, performs deep somatic clearing, and builds your custom daily habit constellations for the upcoming month.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Reassurance Banner -->
+    <div class="mt-16 glass-panel p-8 sm:p-10 border-gold-500/30 text-center">
+      <h3 class="font-serif text-2xl sm:text-3xl text-white mb-3">Still have an unanswered question?</h3>
+      <p class="text-gray-300 text-sm leading-relaxed max-w-xl mx-auto mb-6">
+        Our guides are available directly on WhatsApp to provide personal answers to your unique circumstances.
+      </p>
+      <a href="#" data-wa-action data-wa-type="general" class="btn-gold-primary text-xs uppercase tracking-wider py-3.5 px-8 font-semibold">
+        ASK US ON WHATSAPP →
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-16 pb-12 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-xl font-medium text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+          A luxury sanctuary for conscious manifestation, spiritual awakening, and quantum mindset elevation.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Journeys</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="courses.html" class="hover:text-gold-400">Choose Your Journey</a></li>
+          <li><a href="course-job-money.html" class="hover:text-gold-400">Job & Money Manifestation</a></li>
+          <li><a href="course-supernatural.html" class="hover:text-gold-400">The Supernatural (6 Months)</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Design Your Destiny</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Sanctuary</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="about.html" class="hover:text-gold-400">Our Vision & Beliefs</a></li>
+          <li><a href="faq.html" class="hover:text-gold-400 text-gold-300">Frequently Asked Questions</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Enquiry Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Direct Connect</h4>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Chat directly with us on WhatsApp for rapid assistance.
+        </p>
+        <a href="#" data-wa-action data-wa-type="general" class="btn-gold-outline text-xs py-2.5 px-4 w-full justify-center">
+          Chat on WhatsApp →
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="faq.html" class="hover:text-gray-400">Privacy Policy</a>
+        <a href="faq.html" class="hover:text-gray-400">Terms of Alignment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" data-wa-action data-wa-type="general" class="whatsapp-float-btn" aria-label="Chat on WhatsApp with Prathiba Senthil">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

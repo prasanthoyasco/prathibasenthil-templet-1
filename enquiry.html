@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Your Destiny ✦ Prathiba Senthil Enquiry</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Take the first sacred step. Tell us about yourself, your desires, and allow Prathiba Senthil to guide your quantum transformation." />
+  <meta name="keywords" content="Design Your Destiny, Prathiba Senthil Enquiry, manifestation consultation, personal transformation inquiry" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Interactive Canvas Starfield -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="enquiry.html" class="nav-link active">Enquiry</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="courses.html" class="btn-gold-outline text-xs uppercase tracking-wider py-2.5 px-6">
+          Browse Courses →
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gold-400">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">FAQs</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="courses.html" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        Choose Your Journey →
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-28 md:pt-36 pb-24 px-4 sm:px-8 max-w-4xl mx-auto">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <div class="eyebrow-badge mb-3 justify-center">
+        <span>SACRED INTAKE</span>
+      </div>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-white mb-4">
+        DESIGN YOUR <span class="gold-gradient-text italic font-serif">DESTINY</span>
+      </h1>
+      <p class="text-gray-300 text-base sm:text-lg font-light max-w-xl mx-auto">
+        Tell us about yourself and what you are looking for.
+      </p>
+    </div>
+
+    <!-- The Destiny Enquiry Form Container -->
+    <div class="glass-panel p-8 sm:p-12 border-gold-500/25 relative overflow-hidden shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-violet-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <form id="destiny-enquiry-form" class="space-y-8 relative z-10">
+        
+        <!-- Field 1: Name -->
+        <div>
+          <label for="user-name" class="block text-xs uppercase tracking-widest text-gold-300 font-semibold mb-2">
+            Your Full Name <span class="text-gold-400">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="user-name" 
+            name="name" 
+            required 
+            placeholder="e.g. Elena Vance"
+            class="input-cosmic"
+          />
+        </div>
+
+        <!-- Field 2: Email Address -->
+        <div>
+          <label for="user-email" class="block text-xs uppercase tracking-widest text-gold-300 font-semibold mb-2">
+            Email Address <span class="text-gold-400">*</span>
+          </label>
+          <input 
+            type="email" 
+            id="user-email" 
+            name="email" 
+            required 
+            placeholder="elena@example.com"
+            class="input-cosmic"
+          />
+        </div>
+
+        <!-- Field 3: Mobile Number -->
+        <div>
+          <label for="user-phone" class="block text-xs uppercase tracking-widest text-gold-300 font-semibold mb-2">
+            Mobile Number (with country code) <span class="text-gold-400">*</span>
+          </label>
+          <input 
+            type="tel" 
+            id="user-phone" 
+            name="phone" 
+            required 
+            placeholder="+1 555 123 4567"
+            class="input-cosmic"
+          />
+        </div>
+
+        <!-- Field 4: Reason for Enquiry -->
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-gold-300 font-semibold mb-3">
+            Reason for Enquiry <span class="text-gold-400">*</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Option 1: VIDEO COURSE -->
+            <label class="enquiry-radio-pill selected">
+              <input type="radio" name="enquiry_reason" value="VIDEO COURSE" checked class="accent-gold-400" />
+              <div>
+                <div class="text-white font-medium text-sm">VIDEO COURSE</div>
+                <div class="text-gray-400 text-xs mt-0.5">Job / Money Manifestation</div>
+              </div>
+            </label>
+
+            <!-- Option 2: PERSONAL COURSE -->
+            <label class="enquiry-radio-pill">
+              <input type="radio" name="enquiry_reason" value="PERSONAL COURSE" class="accent-gold-400" />
+              <div>
+                <div class="text-white font-medium text-sm">PERSONAL COURSE</div>
+                <div class="text-gray-400 text-xs mt-0.5">The Supernatural (6 Months)</div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Field 5: Description About Your Needs -->
+        <div>
+          <label for="user-description" class="block text-xs uppercase tracking-widest text-gold-300 font-semibold mb-2">
+            Description About Your Needs
+          </label>
+          <textarea 
+            id="user-description" 
+            name="description" 
+            rows="5"
+            placeholder="Share your current challenges, what you wish to manifest, and what drew you to Prathiba Senthil..."
+            class="input-cosmic"
+          ></textarea>
+        </div>
+
+        <!-- Submission Button -->
+        <div class="pt-4 text-center">
+          <button type="submit" id="enquiry-submit-btn" class="btn-gold-primary w-full py-4 text-sm uppercase tracking-wider font-semibold">
+            SUBMIT & VIEW AVAILABLE JOURNEYS →
+          </button>
+          <p class="text-xs text-gray-500 mt-4 tracking-wide">
+            ✦ Submitting will securely transmit your request and guide you to our journeys.
+          </p>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Alternate WhatsApp Quick Assist -->
+    <div class="mt-12 text-center p-6 glass-panel border-white/5">
+      <p class="text-sm text-gray-400 mb-3">
+        Need an immediate conversation without waiting?
+      </p>
+      <a href="#" data-wa-action data-wa-type="enquiryFollowup" class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 text-sm font-medium transition-colors">
+        <span>Message Admissions Directly on WhatsApp</span>
+        <span>→</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-12 pb-8 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-gray-400">Home</a>
+        <a href="courses.html" class="hover:text-gray-400">Courses</a>
+        <a href="faq.html" class="hover:text-gray-400">FAQs</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" data-wa-action data-wa-type="general" class="whatsapp-float-btn" aria-label="Chat on WhatsApp with Prathiba Senthil">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

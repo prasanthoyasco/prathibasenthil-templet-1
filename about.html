@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Prathiba Senthil ✦ Design Your Destiny</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Discover the philosophy, foundational principles, and transformative mission of Prathiba Senthil. We empower conscious creators to design their destiny." />
+  <meta name="keywords" content="About Prathiba Senthil, spiritual transformation, manifestation principles, design your destiny, personal growth" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Prathiba Senthil ✦ Design Your Destiny" />
+  <meta property="og:description" content="Explore our vision, beliefs, and how we help you awaken your highest reality." />
+  <meta property="og:image" content="assets/images/about-cosmic-nebula.jpg" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Interactive Canvas for Stars -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="enquiry.html" class="btn-gold-primary text-xs uppercase tracking-wider py-2.5 px-6">
+          Begin Consultation <span class="text-sm">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gold-400">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">FAQs</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="enquiry.html" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        Begin Consultation →
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-28 md:pt-36">
+    <!-- ==========================================================================
+         HERO SECTION: ABOUT · DESIGN YOUR DESTINY
+         ========================================================================== -->
+    <section class="relative px-4 sm:px-8 max-w-7xl mx-auto pb-20 overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7">
+          <div class="eyebrow-badge mb-4">
+            <span>ABOUT</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-tight mb-6">
+            DESIGN YOUR <br />
+            <span class="gold-gradient-text italic font-serif">DESTINY</span>
+          </h1>
+
+          <p class="text-gray-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mb-8">
+            Prathiba Senthil was founded on a singular immutable truth: you are not a passive observer of circumstance, but an active architect of physical reality.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#vision" class="btn-gold-primary text-xs uppercase tracking-wider py-3 px-6">
+              Explore Our Vision ↓
+            </a>
+            <a href="courses.html" class="btn-gold-outline text-xs uppercase tracking-wider py-3 px-6">
+              View All Journeys →
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden border border-gold-500/20 shadow-2xl aspect-[4/3] sm:aspect-square">
+            <img 
+              src="assets/images/about-cosmic-nebula.jpg" 
+              alt="Deep space nebula cosmic backdrop" 
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-space-950 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border-gold-500/20">
+              <span class="font-script text-xl text-gold-300 block">"As above, so below. As within, so without."</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest mt-1 block">Hermetic Principle of Resonance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1.5: ABOUT ME
+         ========================================================================== -->
+    <section class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-12 max-w-4xl mx-auto text-center">
+          <div class="eyebrow-badge mb-4 justify-center">
+            <span>ABOUT ME</span>
+          </div>
+          
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-8 leading-snug">
+            "Your reality is the absolute blueprint of your <span class="gold-gradient-text italic font-serif">thoughts and emotions</span>."
+          </h2>
+
+          <div class="space-y-6 text-gray-300 text-base sm:text-lg leading-relaxed text-left sm:text-center font-light">
+            <p>
+              I don't just teach this truth—I am a living testament to it.
+            </p>
+            <p>
+              My journey began as a traditional housewife. Today, I have achieved complete financial freedom, stepped into my dream home, drive my dream car, and manage thriving, successful businesses. This radical transformation did not happen by luck or chance. It happened because I mastered the ultimate secret to human potential: shifting my thoughts, which re-aligned my emotions, and ultimately reshaped my entire physical reality.
+            </p>
+            <p>
+              Throughout my journey, I have walked through life’s toughest, darkest phases, and I have also summited the absolute peaks of success. Because I have personally navigated both extremes, I possess a deep, empathetic understanding of exactly why you might be feeling stuck, blocked, or overwhelmed by your current problems.
+            </p>
+            <p>
+              Having rigorously tested and experienced these universal energetic laws in my own life, I don't offer empty theories. I provide battle-tested, practical tools to help you reprogram your subconscious mind and intentionally manifest your desired reality. Whether you are looking to break free from limiting beliefs or completely revolutionise your life, I am here to show you how to unlock the reality you truly deserve.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: OUR VISION
+         ========================================================================== -->
+    <section id="vision" class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="eyebrow-badge mb-3">
+            <span>FOUNDATIONAL PURPOSE</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-6">
+            OUR <span class="gold-gradient-text italic font-serif">VISION</span>
+          </h2>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            To bridge quantum physics, ancient universal laws, and neuro-linguistic subconscious reprogramming into an elegant, repeatable manifestation methodology.
+          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            We envision a world where conscious individuals wake up each morning sovereign in their power, aligned with unshakeable abundance, and fearless in magnetizing their highest aspirations.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="glass-card p-6">
+            <div class="text-gold-400 text-2xl font-serif mb-3">01</div>
+            <h3 class="text-white text-lg font-medium mb-2">Conscious Sovereignty</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Replacing helplessness with deep self-mastery, understanding that every external result is a reflection of inner states.
+            </p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-gold-400 text-2xl font-serif mb-3">02</div>
+            <h3 class="text-white text-lg font-medium mb-2">Universal Harmony</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Teaching the precise laws of vibration, magnetism, and polarity so you stop forcing and start receiving.
+            </p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-gold-400 text-2xl font-serif mb-3">03</div>
+            <h3 class="text-white text-lg font-medium mb-2">Practical Spirituality</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              No empty rituals. Only rigorous, testable daily practices that systematically reconstruct your career, wealth, and health.
+            </p>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-gold-400 text-2xl font-serif mb-3">04</div>
+            <h3 class="text-white text-lg font-medium mb-2">Global Community</h3>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              A high-frequency network of 10,000+ conscious seekers supporting each other in quantum personal transformation.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: WHAT WE BELIEVE
+         ========================================================================== -->
+    <section class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>OUR CORE CREED</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          WHAT WE <span class="gold-gradient-text italic font-serif">BELIEVE</span>
+        </h2>
+        <p class="text-gray-300 text-base mt-4">
+          Manifestation is not wishful thinking. It is the science of vibrational resonance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass-card p-8 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 text-xl">
+            ✦
+          </div>
+          <h3 class="font-serif text-2xl text-white mb-3">Thoughts Precede Matter</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Every building, fortune, and masterpiece existed first as an invisible wave of thought. When you master your internal dialogue, physical form follows inevitably.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 text-xl">
+            🪷
+          </div>
+          <h3 class="font-serif text-2xl text-white mb-3">Vibrational Entrainment</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            You do not attract what you want; you attract what you are. Shifting your baseline frequency from scarcity to wealth collapses the timeline to your goals.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 text-xl">
+            ∞
+          </div>
+          <h3 class="font-serif text-2xl text-white mb-3">Subconscious Rewiring</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            95% of human behavior is run by subconscious programs installed in early life. We install new neuro-pathways that make wealth and alignment second nature.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT WE OFFER
+         ========================================================================== -->
+    <section class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>TWO PATHWAYS TO ELEVATION</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          WHAT WE <span class="gold-gradient-text italic font-serif">OFFER</span>
+        </h2>
+        <p class="text-gray-300 text-base mt-4">
+          Whether you prefer self-paced mastery or high-touch personal guidance, Prathiba Senthil provides two bespoke journeys.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Offer 1 -->
+        <div class="destination-course-card p-8 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30">
+                VIDEO COURSE
+              </span>
+              <span class="text-xs text-gray-400">Self-Paced · Lifetime Access</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl text-white mb-4">
+              Job / Money Manifestation Course
+            </h3>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+              A comprehensive digital curriculum focused on dissolving generational scarcity mindsets, activating the frequency of high-income career opportunities, and mastering practical energetic wealth attraction.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> 8 Structured HD Video Modules
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> Subconscious Money Habit Reprogramming Audios
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> Printable Energetic Workbooks & Journal Prompts
+              </li>
+            </ul>
+          </div>
+
+          <a href="course-job-money.html" class="btn-gold-primary text-xs uppercase tracking-wider py-3 px-6 text-center">
+            View Course Details →
+          </a>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="destination-course-card p-8 sm:p-10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30">
+                6 MONTH PERSONAL COURSE
+              </span>
+              <span class="text-xs text-gray-400">Elite 1-on-1 Mentorship</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl text-white mb-4">
+              The Supernatural
+            </h3>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+              An intimate, high-frequency mentorship for visionary leaders, entrepreneurs, and seekers. Complete personal guidance, monthly strategic calls, bespoke routine architecture, and quantum identity transformation.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> 1-on-1 Monthly Strategy & Alignment Calls
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> Complete New Routine & Habit Building
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-gold-400" data-config="brand.symbol">✦</span> Monthly Growth Tracking & WhatsApp Concierge
+              </li>
+            </ul>
+          </div>
+
+          <a href="course-supernatural.html" class="btn-gold-primary text-xs uppercase tracking-wider py-3 px-6 text-center">
+            View Course Details →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: HOW WE HELP
+         ========================================================================== -->
+    <section class="relative py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="eyebrow-badge mb-3">
+            <span>THE SOULVERSE METHOD</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-6">
+            HOW WE <span class="gold-gradient-text italic font-serif">HELP</span>
+          </h2>
+          <p class="text-gray-300 text-base leading-relaxed mb-8">
+            We don't leave your evolution to chance. We combine cognitive reprogramming, somatic emotional release, and daily energetic rituals into a seamless operating system for life.
+          </p>
+          <a href="enquiry.html" class="btn-gold-primary text-xs uppercase tracking-wider py-3 px-6">
+            Tell Us About Your Goals →
+          </a>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="glass-panel p-6 border-gold-500/20 flex gap-4 items-start">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/40 flex items-center justify-center text-gold-400 font-serif font-bold text-sm flex-shrink-0">
+              1
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Diagnose Limiting Scarcity Timelines</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                Pinpoint the subconscious trauma and inherited doubts holding your career, wealth, and love life back.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border-gold-500/20 flex gap-4 items-start">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/40 flex items-center justify-center text-gold-400 font-serif font-bold text-sm flex-shrink-0">
+              2
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Re-architect Daily Habit Constellations</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                Replace uninspired routines with morning and evening energetic priming that anchor elevated emotions.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border-gold-500/20 flex gap-4 items-start">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/40 flex items-center justify-center text-gold-400 font-serif font-bold text-sm flex-shrink-0">
+              3
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Align with Universal Attraction Flow</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                Master the art of inspired, non-resistant action where synchronicities and opportunities arrive naturally.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border-gold-500/20 flex gap-4 items-start">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 border border-gold-400/40 flex items-center justify-center text-gold-400 font-serif font-bold text-sm flex-shrink-0">
+              4
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-base mb-1">Sustain Elevated Identity Long-Term</h4>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                Lock in permanent mindset elevation through monthly tracking, accountability, and celebratory milestone check-ins.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: PERSONAL GROWTH & TRANSFORMATION
+         ========================================================================== -->
+    <section id="personal-growth" class="relative py-24 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10 text-center">
+      <div class="max-w-3xl mx-auto">
+        <div class="eyebrow-badge mb-4 justify-center">
+          <span>THE ULTIMATE DESTINATION</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-6">
+          PERSONAL GROWTH & <br />
+          <span class="gold-gradient-text italic font-serif">TRANSFORMATION</span>
+        </h2>
+
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-10 font-light">
+          Your life will not change by hoping. It transforms the moment you make the sacred decision to stop playing small and step into the cosmic abundance that is your birthright.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5">
+          <a href="enquiry.html" class="btn-gold-primary text-xs uppercase tracking-wider py-3.5 px-8">
+            Design Your Destiny Now →
+          </a>
+          <a href="courses.html" class="btn-gold-outline text-xs uppercase tracking-wider py-3.5 px-8">
+            Choose Your Journey →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-16 pb-12 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-xl font-medium text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+          A luxury sanctuary for conscious manifestation, spiritual awakening, and quantum mindset elevation.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Journeys</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="courses.html" class="hover:text-gold-400 transition-colors">Choose Your Journey</a></li>
+          <li><a href="course-job-money.html" class="hover:text-gold-400 transition-colors">Job & Money Manifestation</a></li>
+          <li><a href="course-supernatural.html" class="hover:text-gold-400 transition-colors">The Supernatural (6 Months)</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400 transition-colors">Design Your Destiny</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Sanctuary</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="about.html" class="hover:text-gold-400 transition-colors">Our Vision & Beliefs</a></li>
+          <li><a href="faq.html" class="hover:text-gold-400 transition-colors">Frequently Asked Questions</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400 transition-colors">Enquiry Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Direct Connect</h4>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Questions about our philosophy or enrollment? Chat directly with us on WhatsApp.
+        </p>
+        <a href="#" data-wa-action data-wa-type="general" class="btn-gold-outline text-xs py-2.5 px-4 w-full justify-center">
+          Chat on WhatsApp →
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="faq.html" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
+        <a href="faq.html" class="hover:text-gray-400 transition-colors">Terms of Alignment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" data-wa-action data-wa-type="general" class="whatsapp-float-btn" aria-label="Chat on WhatsApp with Prathiba Senthil">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

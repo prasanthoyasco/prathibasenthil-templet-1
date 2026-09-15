@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Supernatural ✦ 6-Month Personal Mentorship | Prathiba Senthil</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="An intimate 6-month bespoke personal mentorship for visionary leaders and creators. Complete routine building, money habit change, and identity transformation." />
+  <meta name="keywords" content="The Supernatural course, 6 month personal mentorship, personal guidance manifestation, identity transformation, routine building" />
+  <meta name="author" content="Prathiba Senthil" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Supernatural ✦ 6-Month Personal Mentorship | Prathiba Senthil" />
+  <meta property="og:description" content="Strictly limited to 10 visionary individuals per cohort. Personal guidance, monthly strategic calls, and complete life transformation." />
+  <meta property="og:image" content="assets/images/course-supernatural-cosmic.jpg" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              950: '#04050d',
+              900: '#070919',
+              850: '#0c0f28',
+              800: '#121538',
+            },
+            midnight: '#15103a',
+            cosmic: {
+              purple: '#301662',
+              violet: '#7c3aed',
+              magenta: '#c026d3',
+            },
+            gold: {
+              300: '#ffe4a0',
+              400: '#ffd885',
+              500: '#f5c469',
+              600: '#d4a237',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            bodySerif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-space-950 text-white selection:bg-gold-500/30 selection:text-white">
+
+  <!-- Interactive Canvas Starfield -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 glass-header px-4 sm:px-8 py-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none" aria-label="Prathiba Senthil Home">
+        <span class="text-gold-400 text-2xl transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl sm:text-2xl font-medium tracking-wide text-white group-hover:text-gold-300 transition-colors"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link active">Courses</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <!-- Conversion WhatsApp CTA in Header -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-2.5 px-6">
+          Enquire on WhatsApp <span class="text-sm">→</span>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 hidden bg-[#050612]/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10" aria-hidden="true">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+        <span class="font-serif text-xl font-semibold text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+      </div>
+      <button id="mobile-menu-close" class="text-gray-400 hover:text-white p-2 focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 my-auto text-center">
+      <a href="index.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Home</a>
+      <a href="about.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">About</a>
+      <a href="courses.html" class="mobile-nav-link font-serif text-3xl text-gold-400">Courses</a>
+      <a href="enquiry.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">Enquiry</a>
+      <a href="faq.html" class="mobile-nav-link font-serif text-3xl text-gray-200 hover:text-gold-400 transition-colors">FAQs</a>
+    </nav>
+    <div class="pt-6 border-t border-white/10 text-center">
+      <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="mobile-nav-link btn-gold-primary w-full text-center py-3.5 text-sm uppercase tracking-wider">
+        ENQUIRE ON WHATSAPP →
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-28 md:pt-36">
+    <!-- ==========================================================================
+         HERO SECTION: THE SUPERNATURAL & CINEMATIC COSMIC ARTWORK
+         ========================================================================== -->
+    <section class="relative px-4 sm:px-8 max-w-7xl mx-auto pb-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Course Information & WhatsApp Conversion Button -->
+        <div class="lg:col-span-7">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs uppercase tracking-widest text-gold-300 font-bold px-3 py-1 rounded-full bg-gold-400/10 border border-gold-400/30">
+              6 MONTH PERSONAL COURSE
+            </span>
+            <span class="text-xs text-gray-400">Bespoke 1-on-1 Mentorship · Limited to 10 Seats</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-tight mb-6">
+            THE <br />
+            <span class="gold-gradient-text italic font-serif">SUPERNATURAL</span>
+          </h1>
+
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+            An intimate, high-frequency 6-month personal mentorship for visionary individuals, entrepreneurs, and seekers ready to dissolve old limitations, re-architect daily habits, and operate at the frequency of miracles.
+          </p>
+
+          <!-- Investment & WhatsApp CTA Box -->
+          <div class="p-6 rounded-2xl glass-panel border-gold-500/30 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div>
+              <span class="text-xs text-gray-400 uppercase tracking-widest block">Cohort Admissions</span>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-serif text-3xl sm:text-4xl font-bold text-gold-400" data-config="courses.supernatural.priceDisplay">By Application</span>
+              </div>
+              <span class="text-xs text-gray-400 mt-1 block">Includes 6 Months Private 1-on-1 Access + VIP Concierge</span>
+            </div>
+
+            <!-- THE SPECIFIED CONVERSION CTA: ENQUIRE ON WHATSAPP -->
+            <div>
+              <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-4 px-8 w-full sm:w-auto text-center font-semibold">
+                ENQUIRE ON WHATSAPP →
+              </a>
+              <span class="text-[0.7rem] text-gray-500 block text-center mt-2">Connect directly with Admissions</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-6 text-xs text-gray-400">
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> 1-on-1 Monthly Calls</span>
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> Bespoke Routine Building</span>
+            <span class="flex items-center gap-1.5"><span class="text-gold-400" data-config="brand.symbol">✦</span> Weekly WhatsApp Alignment</span>
+          </div>
+        </div>
+
+        <!-- Right: Cinematic Cosmic Visual Artwork -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl overflow-hidden border border-gold-500/30 shadow-2xl aspect-[4/3] sm:aspect-square group">
+            <img 
+              src="assets/images/course-supernatural-cosmic.jpg" 
+              alt="Radiant celestial vortex in deep midnight indigo and golden starlight" 
+              class="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-space-950/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 glass-panel border-gold-500/20">
+              <span class="font-serif text-lg text-white font-medium block">The Quantum Leap in Identity</span>
+              <span class="text-xs text-gold-400/90 mt-0.5 block">You do not manifest what you want. You manifest who you are.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1: OVERVIEW
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="max-w-3xl">
+        <div class="eyebrow-badge mb-3">
+          <span>THE MASTER INITIATION</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white mb-6">
+          Mentorship <span class="gold-gradient-text italic font-serif">Overview</span>
+        </h2>
+        <p class="text-gray-300 text-base leading-relaxed mb-6">
+          <strong>The Supernatural</strong> is not a passive library of videos. It is an immersive, high-proximity 6-month laboratory of personal evolution. Designed for those who have read the books and watched the seminars, but know that genuine quantum leaps require bespoke diagnostics, constant energetic calibration, and relentless accountability.
+        </p>
+        <p class="text-gray-300 text-base leading-relaxed">
+          Over 180 days, we dismantle the subconscious comfort zones that sabotage your highest potential. We rebuild your energetic operating system, anchor high-frequency daily routines, align your financial behaviors, and track your metrics month by month until your external world mirrors your grandest vision.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: CORE PILLARS (All 6 Included Requirements from Prompt)
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="eyebrow-badge mb-3 justify-center">
+          <span>THE 6 PILLARS OF TRANSFORMATION</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white">
+          What Is <span class="gold-gradient-text italic font-serif">Included</span>
+        </h2>
+        <p class="text-gray-400 text-sm mt-3">
+          Every dimension of your inner and outer reality addressed with surgical precision.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1: Personal Guidance -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            01
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Personal Guidance
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Direct, private mentorship with our senior manifestation guides. Continuous energetic calibration, intuitive feedback, and direct answers to every dilemma.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Monthly Calls -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            02
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Monthly Strategic Calls
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Deep-dive 60-minute 1-on-1 private video sessions every month to assess energy blocks, align upcoming priorities, and set quantum milestone targets.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Complete New Routine Building -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            03
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Complete New Routine Building
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Architecture of customized morning priming, deep focus blocks, somatic unwinding, and evening subconscious integration that fit your exact schedule.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Money Habit Change -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            04
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Money Habit Change
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Revolutionize your spending, saving, investment, and wealth pricing psychology. Eradicate impulsive emotional coping and anchor generational wealth habits.
+          </p>
+        </div>
+
+        <!-- Pillar 5: Monthly Growth Tracking -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            05
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Monthly Growth Tracking
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Structured benchmarks measuring emotional stability, revenue growth, sync occurrences, and relationship harmony to mathematically verify progress.
+          </p>
+        </div>
+
+        <!-- Pillar 6: Identity & Mindset Transformation -->
+        <div class="glass-card p-8 group">
+          <div class="w-12 h-12 rounded-full bg-cosmic-purple/40 border border-gold-500/30 flex items-center justify-center text-gold-400 font-serif font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+            06
+          </div>
+          <h3 class="font-serif text-xl text-white mb-3 group-hover:text-gold-300 transition-colors">
+            Identity & Mindset Transformation
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Shifting from who you were conditioned to be into who you were born to be. Sovereign decision making, charismatic authority, and effortless magnetism.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT YOU'LL LEARN & BENEFITS
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="eyebrow-badge mb-3">
+            <span>THE EXPERIENCE</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-white mb-6">
+            Who This Mentorship Is <span class="gold-gradient-text italic font-serif">Reserved For</span>
+          </h2>
+          <p class="text-gray-300 text-base leading-relaxed mb-6">
+            The Supernatural is intentionally not for the masses. We limit each intake to just 10 hand-selected individuals to preserve maximum energy devotion.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-300 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="text-gold-400">✓</span> Entrepreneurs scaling to 7 & 8-figure revenue without burnout
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold-400">✓</span> Executives feeling energetically capped in corporate hierarchy
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold-400">✓</span> Creators & leaders craving authentic spiritual grounding and power
+            </li>
+          </ul>
+
+          <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-3.5 px-6 font-semibold">
+            ENQUIRE ON WHATSAPP →
+          </a>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 1: The Reset</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Subconscious baseline audit, emotional debt detox, and routine redesign.</p>
+          </div>
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 2: Nervous System Capacity</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Expanding your somatic capacity to hold wealth, love, and public attention.</p>
+          </div>
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 3: Money Habit Revolution</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Restructuring financial inflow, renegotiating value, clearing money blocks.</p>
+          </div>
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 4: Relational Magnetic Resonance</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Eliminating codependency, attracting high-caliber peers, sovereign boundaries.</p>
+          </div>
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 5: Quantum Reality Collapse</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Operating in deep surrender while reality reorganizes around your new frequency.</p>
+          </div>
+          <div class="glass-panel p-5 border-white/10">
+            <span class="text-gold-400 text-sm font-semibold block mb-1">Month 6: The Sovereign Embodiment</span>
+            <p class="text-gray-400 text-xs leading-relaxed">Locking in lifetime automaticity, celebrated milestone review, graduation.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: FORMAT, DURATION & PRICING
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="glass-panel p-8 sm:p-12 max-w-4xl mx-auto border-gold-500/30">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="eyebrow-badge mb-2 justify-center">
+            <span>APPLICATION DETAILS</span>
+          </div>
+          <h3 class="font-serif text-3xl sm:text-4xl text-white">
+            Mentorship Specifications
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 text-center">
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Program Format</span>
+            <span class="text-white font-medium text-base">1-on-1 Mentorship + Concierge</span>
+          </div>
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Duration</span>
+            <span class="text-white font-medium text-base">6 Months (180 Days)</span>
+          </div>
+          <div class="p-4 rounded-xl bg-space-950/60 border border-white/5">
+            <span class="text-gray-400 text-xs uppercase tracking-widest block mb-1">Cohort Size</span>
+            <span class="text-gold-400 font-serif font-bold text-2xl">Strictly 10 Seats</span>
+          </div>
+        </div>
+
+        <!-- Conversion Flow CTA: Enquire on WhatsApp -->
+        <div class="text-center">
+          <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-primary text-sm uppercase tracking-wider py-4 px-10 font-semibold inline-flex items-center gap-2">
+            <span>ENQUIRE ON WHATSAPP →</span>
+          </a>
+          <p class="text-xs text-gray-400 mt-4">
+            ✦ All applications and suitability assessments are conducted via private WhatsApp consultation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: FAQ
+         ========================================================================== -->
+    <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-white/10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="eyebrow-badge mb-2 justify-center">
+          <span>FREQUENT QUESTIONS</span>
+        </div>
+        <h3 class="font-serif text-2xl sm:text-3xl text-white">
+          The Supernatural Mentorship FAQs
+        </h3>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">How much time do I need to commit each week?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            The program is engineered for high-performing professionals. It integrates seamlessly into your life through 20 minutes of daily morning/evening routine priming, one 60-minute monthly strategy call, and brief weekly voice check-ins via WhatsApp.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">How do I know if I will be accepted into the cohort?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            After clicking "Enquire on WhatsApp", you will speak directly with our team. We evaluate your dedication, emotional readiness, and alignment with the Prathiba Senthil principles.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-panel border-white/10">
+          <button class="accordion-header w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none">
+            <span class="font-serif text-base sm:text-lg text-white">What is the investment for the 6-month mentorship?</span>
+            <span class="accordion-icon text-gold-400 text-lg">▼</span>
+          </button>
+          <div class="accordion-content px-5 pb-5 text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Due to the personalized nature and 1-on-1 proximity, investment packages and flexible quarterly terms are shared directly during your initial WhatsApp conversation.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: FINAL COURSE CTA
+         ========================================================================== -->
+    <section class="py-20 px-4 sm:px-8 max-w-5xl mx-auto text-center border-t border-white/10">
+      <div class="eyebrow-badge mb-3 justify-center">
+        <span>SACRED APPLICATION</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-6">
+        Ready for The Supernatural Shift?
+      </h2>
+      <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mb-8 font-light">
+        Do not allow another year to pass in the loop of your current baseline. Secure your consideration for the upcoming 10-seat cohort.
+      </p>
+      <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-primary text-xs uppercase tracking-wider py-4 px-10 font-semibold">
+        ENQUIRE ON WHATSAPP →
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#04050e] pt-16 pb-12 px-4 sm:px-8 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold-400 text-xl" data-config="brand.symbol">✦</span>
+          <span class="font-serif text-xl font-medium text-white"><span data-config="brand.name">Prathiba Senthil</span></span>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6">
+          A luxury sanctuary for conscious manifestation, spiritual awakening, and quantum mindset elevation.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Journeys</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="courses.html" class="hover:text-gold-400">Choose Your Journey</a></li>
+          <li><a href="course-job-money.html" class="hover:text-gold-400">Job & Money Manifestation</a></li>
+          <li><a href="course-supernatural.html" class="hover:text-gold-400 text-gold-300">The Supernatural (6 Months)</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Design Your Destiny</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Sanctuary</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm">
+          <li><a href="about.html" class="hover:text-gold-400">Our Vision & Beliefs</a></li>
+          <li><a href="faq.html" class="hover:text-gold-400">Frequently Asked Questions</a></li>
+          <li><a href="enquiry.html" class="hover:text-gold-400">Enquiry Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-medium text-sm mb-4 uppercase tracking-wider">Direct Connect</h4>
+        <p class="text-gray-400 text-xs leading-relaxed mb-4">
+          Speak with our personal admissions guide regarding application availability.
+        </p>
+        <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="btn-gold-outline text-xs py-2.5 px-4 w-full justify-center">
+          ENQUIRE ON WHATSAPP →
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div>© 2026 <span data-config="brand.name">Prathiba Senthil</span>. All rights reserved. Designed for sovereign creators.</div>
+      <div class="flex items-center gap-6">
+        <a href="faq.html" class="hover:text-gray-400">Privacy Policy</a>
+        <a href="faq.html" class="hover:text-gray-400">Terms of Alignment</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" data-wa-action data-wa-type="supernaturalCourse" class="whatsapp-float-btn" aria-label="Enquire on WhatsApp about The Supernatural">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.79 14.07c-.24.68-1.4 1.26-1.93 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.77-.35.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.15.15-.31.31-.13.62.18.31.79 1.31 1.7 2.12 1.17 1.04 2.15 1.37 2.46 1.52.31.15.49.13.67-.08.19-.21.79-.92 1-.1.23.21.39.46.3.71-.09.25-.24.68-.48.97z"/>
+    </svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
