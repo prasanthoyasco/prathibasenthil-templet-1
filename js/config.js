@@ -20,10 +20,10 @@ const SOULVERSE_CONFIG = {
   // Contact Information
   contact: {
     // WhatsApp contact number (digits only without '+' or spaces for wa.me link)
-    whatsappNumber: "919876543210",
+    whatsappNumber: "916381083284",
     
     // Display formatted WhatsApp phone number for human reading
-    whatsappDisplay: "+91 98765 43210",
+    whatsappDisplay: "+91 63810 83284",
 
     // General official inquiry email
     email: "connect@prathibasenthil.com",
@@ -32,8 +32,8 @@ const SOULVERSE_CONFIG = {
     supportEmail: "support@prathibasenthil.com",
     
     // Optional official calling line
-    phoneDisplay: "+1 (800) 555-SOUL",
-    phoneTel: "+18005557685"
+    phoneDisplay: "+91 63810 83284",
+    phoneTel: "+91 63810 83284"
   },
 
   // Pre-configured WhatsApp Messages for Conversions
@@ -87,7 +87,7 @@ const SOULVERSE_CONFIG = {
     let message = this.whatsappMessages[type] || this.whatsappMessages.general;
     
     if (customParam) {
-      message += " (" + customParam + ")";
+      message += " " + customParam + " ";
     }
 
     return `${baseUrl}?text=${encodeURIComponent(message)}`;

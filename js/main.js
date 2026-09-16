@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initGSAPAnimations();
     initTrailerModal();
     initWhatsAppModal(); // NEW: WhatsApp Enquiry Modal
+    initEnquiryForm();
     initNavbarScroll();
     initMobileMenu();
     initSmoothScrolling();
@@ -420,4 +421,56 @@ function initSmoothScrolling() {
             }
         });
     });
+}
+
+/**
+ * 8. Destiny Enquiry Form
+ * Handles submission of the main enquiry form on enquiry.html
+ */
+function initEnquiryForm() {
+    const form = document.getElementById('destiny-enquiry-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('user-name').value.trim();
+        const email = document.getElementById('user-email').value.trim();
+        const phone = document.getElementById('user-phone').value.trim();
+        const needs = document.getElementById('user-description').value.trim() || 'N/A';
+        const reason = document.querySelector('input[name="enquiry_reason"]:checked').value;
+
+        let courseType = "general";
+        if (reason === "VIDEO COURSE") {
+            courseType = "jobMoneyCourse";
+        } else if (reason === "PERSONAL COURSE") {
+            courseType = "supernaturalCourse";
+        }
+
+        // Get the base message from config
+        let baseMessage = SOULVERSE_CONFIG?.whatsappMessages?.[courseType] || SOULVERSE_CONFIG?.whatsappMessages?.general || "Hello, I would like to enquire.";
+        
+        // Append user details
+        const rawMessage = `${baseMessage} ( My Details: Name: ${name} Email: ${email} Mobile: ${phone} Needs: ${needs})`;
+        
+        const whatsappNumber = SOULVERSE_CONFIG?.contact?.whatsappNumber || "916381083284";
+        const finalUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(rawMessage)}`;
+
+        // Redirect to WhatsApp
+        window.location.href = finalUrl;
+    });
+
+    // Handle radio pill selection styling
+    const radioPills = document.querySelectorAll('.enquiry-radio-pill');
+    if (radioPills.length > 0) {
+        radioPills.forEach(pill => {
+            const radio = pill.querySelector('input[type="radio"]');
+            radio.addEventListener('change', () => {
+                radioPills.forEach(p => p.classList.remove('selected'));
+                if (radio.checked) {
+                    pill.classList.add('selected');
+                }
+            });
+        });
+    }
 }

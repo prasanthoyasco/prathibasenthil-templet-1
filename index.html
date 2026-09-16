@@ -502,7 +502,7 @@
     <!-- ==========================================================================
          SECTION 5: FINAL CTA SECTION (Earth Horizon Artwork & Script Callout)
          ========================================================================== -->
-    <section class="relative min-h-[580px] sm:min-h-[640px] flex items-center justify-center overflow-hidden px-4 sm:px-8 my-16">
+    <section class="relative min-h-[580px] sm:min-h-[640px] flex items-center justify-center overflow-hidden px-4 sm:px-8 mt-16">
       
       <!-- Background Earth Horizon Composite -->
       <div class="absolute inset-0 z-0">
@@ -510,9 +510,10 @@
           src="assets/images/cta-earth-horizon.jpg" 
           alt="Glowing curved Earth horizon with city lights and starlight against deep cosmic space" 
           class="w-full h-full object-cover object-bottom"
+          style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 35%); mask-image: linear-gradient(to bottom, transparent 0%, black 35%);"
           loading="lazy"
         />
-        <div class="absolute inset-0 bg-gradient-to-b from-space-950 via-space-950/40 to-space-950/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-space-950/60 to-space-950/90 pointer-events-none"></div>
       </div>
 
       <!-- Reference Script Annotation: "SAME ENERGY . BIGGER REALITY" -->
